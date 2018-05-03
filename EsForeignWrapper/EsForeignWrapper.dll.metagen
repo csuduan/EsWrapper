@@ -1,0 +1,1117 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly EsForeignWrapper, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class EsForeignWrapper.StkData: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Market : Public, HasFieldMarshal
+    System.String Code : Public, HasFieldMarshal
+    Single YClose : Public
+    Single YSettle : Public
+    Single Open : Public
+    Single High : Public
+    Single Low : Public
+    Single New : Public
+    Single NetChg : Public
+    Single Markup : Public
+    Single Swing : Public
+    Single Settle : Public
+    Single Volume : Public
+    Single Amount : Public
+    Single[] Ask : Public, HasFieldMarshal
+    Single[] AskVol : Public, HasFieldMarshal
+    Single[] Bid : Public, HasFieldMarshal
+    Single[] BidVol : Public, HasFieldMarshal
+    Single AvgPrice : Public
+    Single LimitUp : Public
+    Single LimitDown : Public
+    Single HistoryHigh : Public
+    Single HistoryLow : Public
+    Single YOPI : Public
+    Single ZXSD : Public
+    Single JXSD : Public
+    Single CJJE : Public
+    Single TClose : Public
+    Single Lastvol : Public
+    Single status : Public
+    Single updatetime : Public
+    Single BestBPrice : Public
+    Single BestBVol : Public
+    Single BestSPrice : Public
+    Single BestSVol : Public
+Class EsForeignWrapper.HistoryData: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String time : Public, HasFieldMarshal
+    Single fOpen : Public
+    Single fHigh : Public
+    Single fLow : Public
+    Single fClose : Public
+    Single fVolume : Public
+    Single fAmount : Public
+Class EsForeignWrapper.StkHisData: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Market : Public, HasFieldMarshal
+    System.String Code : Public, HasFieldMarshal
+    Int16 nPeriod : Public
+    Int16 nCount : Public
+    EsForeignWrapper.HistoryData[] HisData : Public, HasFieldMarshal
+Class EsForeignWrapper.StockTraceData: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String time : Public, HasFieldMarshal
+    Single m_NewPrice : Public
+    Single m_Volume : Public
+    Single m_Amount : Public
+    Single m_BuyPrice : Public
+    Single m_SellPrice : Public
+    Single m_BuyVol : Public
+    Single m_SellVol : Public
+Class EsForeignWrapper.StkTraceData: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Market : Public, HasFieldMarshal
+    System.String Code : Public, HasFieldMarshal
+    UInt16 nCount : Public
+    EsForeignWrapper.StockTraceData[] TraceData : Public, HasFieldMarshal
+Class EsForeignWrapper.WStockInfo: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String szCode : Public, HasFieldMarshal
+    System.String szName : Public, HasFieldMarshal
+    Byte Precision : Public
+Class EsForeignWrapper.WMarketInfo: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Market : Public, HasFieldMarshal
+    UInt16 stocknum : Public
+    EsForeignWrapper.WStockInfo[] stockdata : Public, HasFieldMarshal
+Class EsForeignWrapper.AddressField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Ip : Public, HasFieldMarshal
+    UInt16 Port : Public
+Class EsForeignWrapper.LoginReqField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Byte IsCaLogin : Public
+    Byte Identity : Public
+    Byte IsForcePwd : Public
+    System.String ClientNo : Public, HasFieldMarshal
+    System.String LoginPwd : Public, HasFieldMarshal
+    System.String NewPwd : Public, HasFieldMarshal
+    System.String OtpPass : Public, HasFieldMarshal
+    Int32 CaLen : Public
+    System.String CaInfo : Public, HasFieldMarshal
+Class EsForeignWrapper.LoginRspField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    EsForeignWrapper.EnumIsCaLoginType IsCaLogin : Public
+    EsForeignWrapper.EnumIsForcePasswordType IsForcePwd : Public
+    System.String LoginNo : Public, HasFieldMarshal
+    System.String LoginName : Public, HasFieldMarshal
+    System.String ReservedInfo : Public, HasFieldMarshal
+    System.String LastLoginDateTime : Public, HasFieldMarshal
+    System.String LastLogoutDateTime : Public, HasFieldMarshal
+    System.String LastLoginIp : Public, HasFieldMarshal
+    Int16 LastLoginPort : Public
+    System.String LastLoginMachineInfo : Public, HasFieldMarshal
+    System.String ServerDateTime : Public, HasFieldMarshal
+Class EsForeignWrapper.OrderInsertReqField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String ClientNo : Public, HasFieldMarshal
+    System.String CommodityNo : Public, HasFieldMarshal
+    System.String ContractNo : Public, HasFieldMarshal
+    Byte OrderType : Public
+    Byte OrderWay : Public
+    Byte OrderMode : Public
+    System.String ValidDateTime : Public, HasFieldMarshal
+    Byte IsRiskOrder : Public
+    Byte Direct : Public
+    Byte Offset : Public
+    Byte Hedge : Public
+    Double OrderPrice : Public
+    Double TriggerPrice : Public
+    Int32 OrderVol : Public
+    Int32 MinMatchVol : Public
+    Int32 SaveInt : Public
+    Double SaveDouble : Public
+    System.String SaveString : Public, HasFieldMarshal
+Class EsForeignWrapper.OrderInsertRspField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt16 OrderStreamId : Public
+    Int32 OrderId : Public
+    System.String LocalNo : Public, HasFieldMarshal
+    System.String TradeNo : Public, HasFieldMarshal
+    System.String InsertNo : Public, HasFieldMarshal
+    System.String InsertDateTime : Public, HasFieldMarshal
+    Byte OrderState : Public
+    EsForeignWrapper.OrderInsertReqField ReqData : Public
+Class EsForeignWrapper.OrderStateNoticeField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Byte OrderType : Public
+    Byte Offset : Public
+    Byte Hedge : Public
+    Double OrderPrice : Public
+    Double TriggerPrice : Public
+    Int32 OrderVol : Public
+    UInt32 OrderStreamId : Public
+    Int32 OrderId : Public
+    System.String LocalNo : Public, HasFieldMarshal
+    System.String SystemNo : Public, HasFieldMarshal
+    System.String UpdateNo : Public, HasFieldMarshal
+    System.String UpdateDateTime : Public, HasFieldMarshal
+    Byte OrderState : Public
+    Double MatchPrice : Public
+    Int32 MatchVol : Public
+    Int32 ErrorCode : Public
+    System.String ActionLocalNo : Public, HasFieldMarshal
+    EsForeignWrapper.OrderInsertReqField ReqData : Public
+    System.String ExchangeSystemNo : Public, HasFieldMarshal
+    System.String ErrorText : Public, HasFieldMarshal
+Class EsForeignWrapper.OrderInfoNoticeField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    EsForeignWrapper.OrderInsertReqField ReqData : Public
+    UInt32 OrderStreamId : Public
+    Int32 OrderId : Public
+    System.String LocalNo : Public, HasFieldMarshal
+    System.String SystemNo : Public, HasFieldMarshal
+    System.String TradeNo : Public, HasFieldMarshal
+    System.String InsertNo : Public, HasFieldMarshal
+    System.String InsertDateTime : Public, HasFieldMarshal
+    System.String UpdateNo : Public, HasFieldMarshal
+    System.String UpdateDateTime : Public, HasFieldMarshal
+    Byte OrderState : Public
+    Double MatchPrice : Public
+    Int32 MatchVol : Public
+    Int32 ErrorCode : Public
+    System.String ActionLocalNo : Public, HasFieldMarshal
+    Byte OrderInput : Public
+    Byte Deleted : Public
+    Byte AddOne : Public
+    System.String ExchangeSystemNo : Public, HasFieldMarshal
+    System.String ErrorText : Public, HasFieldMarshal
+Class EsForeignWrapper.OrderDeleteReqField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 OrderId : Public
+Class EsForeignWrapper.OrderDeleteRspField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    EsForeignWrapper.OrderStateNoticeField OrderStateField : Public
+    EsForeignWrapper.OrderInsertReqField ReqData : Public
+Class EsForeignWrapper.OrderModifyRspField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    EsForeignWrapper.OrderStateNoticeField OrderStateField : Public
+    EsForeignWrapper.OrderInsertReqField ReqData : Public
+Class EsForeignWrapper.MatchStateNoticeField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt32 MatchStreamId : Public
+    System.String ClientNo : Public, HasFieldMarshal
+    System.String SystemNo : Public, HasFieldMarshal
+    System.String MatchNo : Public, HasFieldMarshal
+    Byte MatchMode : Public
+    Byte MatchWay : Public
+    Double MatchPrice : Public
+    Int32 MatchVol : Public
+    System.String MatchDateTime : Public, HasFieldMarshal
+    Double MatchFee : Public
+    System.String CurrencyNo : Public, HasFieldMarshal
+    Byte AddOne : Public
+    Byte ManualFee : Public
+    Byte Deleted : Public
+    Int32 OrderId : Public
+    Int32 MatchId : Public
+    Double CoverPrice : Public
+Class EsForeignWrapper.MatchInfoNoticeField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    EsForeignWrapper.MatchStateNoticeField StateData : Public
+    System.String CommodityNo : Public, HasFieldMarshal
+    System.String ContractNo : Public, HasFieldMarshal
+    Byte Direct : Public
+    Byte Offset : Public
+Class EsForeignWrapper.MoneyQryReqField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String ClientNo : Public, HasFieldMarshal
+Class EsForeignWrapper.MoneyQryRspField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String ClientNo : Public, HasFieldMarshal
+    System.String CurrencyNo : Public, HasFieldMarshal
+    Double YAvailable : Public
+    Double YCanCashOut : Public
+    Double YMoney : Public
+    Double YBalance : Public
+    Double YUnExpiredProfit : Public
+    Double Adjust : Public
+    Double CashIn : Public
+    Double CashOut : Public
+    Double Fee : Public
+    Double Frozen : Public
+    Double CoverProfit : Public
+    Double DayCoverProfit : Public
+    Double FloatProfit : Public
+    Double DayFloatProfit : Public
+    Double UnExpiredProfit : Public
+    Double Premium : Public
+    Double Deposit : Public
+    Double KeepDeposit : Public
+    Double Pledge : Public
+    Double TAvailable : Public
+    Double Discount : Public
+    Double TradeFee : Public
+    Double DeliveryFee : Public
+    Double ExchangeFee : Public
+    Double FrozenDeposit : Public
+    Double FrozenFee : Public
+    Double NewFloatProfit : Public
+    Double LmeFloatProfit : Public
+    Double OptionMarketValue : Public
+    Double OriCash : Public
+    Double TMoney : Public
+    Double TBalance : Public
+    Double TCanCashOut : Public
+    Double RiskRate : Public
+    Double AccountMarketValue : Public
+Class EsForeignWrapper.HoldQryReqField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String ClientNo : Public, HasFieldMarshal
+    System.String ExchangeNo : Public, HasFieldMarshal
+    System.String CommodityNo : Public, HasFieldMarshal
+    System.String ContractNo : Public, HasFieldMarshal
+Class EsForeignWrapper.HoldQryRspField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 HoldKeyId : Public
+    System.String ClientNo : Public, HasFieldMarshal
+    System.String CommodityNo : Public, HasFieldMarshal
+    System.String ContractNo : Public, HasFieldMarshal
+    Byte Direct : Public
+    Byte Hedge : Public
+    Double TradePrice : Public
+    Int32 TradeVol : Public
+    Double YSettlePrice : Public
+    Double TNewPrice : Public
+    System.String MatchDateTime : Public, HasFieldMarshal
+    System.String MatchNo : Public, HasFieldMarshal
+    Double Deposit : Public
+    Double KeepDeposit : Public
+Class EsForeignWrapper.CommodityQryReqField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class EsForeignWrapper.CommodityQryRspField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String ExchangeNo : Public, HasFieldMarshal
+    Byte CommodityType : Public
+    System.String CommodityNo : Public, HasFieldMarshal
+    System.String RelateCommodityNo : Public, HasFieldMarshal
+    System.String CommodityName : Public, HasFieldMarshal
+    System.String CommodityAttribute : Public, HasFieldMarshal
+    Byte CommodityState : Public
+    Double ProductDot : Public
+    Double UpperTick : Public
+    Int32 LowerTick : Public
+    System.String CurrencyNo : Public, HasFieldMarshal
+    Byte DeliveryMode : Public
+    Int32 DeliveryDays : Public
+    Byte DepositCalculateMode : Public
+    Int32 MaxSingleOrderVol : Public
+    Int32 MaxHoldVol : Public
+    System.String AddOneTime : Public, HasFieldMarshal
+    Byte CmbDirect : Public
+    Byte CoverMode : Public
+Class EsForeignWrapper.ContractQryRspField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String CommodityNo : Public, HasFieldMarshal
+    System.String ContractNo : Public, HasFieldMarshal
+    System.String ContractName : Public, HasFieldMarshal
+    Byte ContractType : Public
+    Byte ContractState : Public
+    System.String ExpiryDate : Public, HasFieldMarshal
+    System.String LastTradeDate : Public, HasFieldMarshal
+    System.String FirstNoticeDate : Public, HasFieldMarshal
+Class EsForeignWrapper.ClientPasswordModifyRspField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String ClientNo : Public, HasFieldMarshal
+    Byte PasswordType : Public
+Class EsForeignWrapper.ExchangeStateModifyNoticeField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String ExchangeNo : Public, HasFieldMarshal
+    Byte ExchangeState : Public
+Class EsForeignWrapper.HisOrderQryRspField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    EsForeignWrapper.OrderInfoNoticeField Data : Public
+    System.String Date : Public, HasFieldMarshal
+Class EsForeignWrapper.HisMatchQryRspField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Date : Public, HasFieldMarshal
+    System.String ClientNo : Public, HasFieldMarshal
+    System.String SettleNo : Public, HasFieldMarshal
+    System.String CommodityNo : Public, HasFieldMarshal
+    System.String ContractNo : Public, HasFieldMarshal
+    Byte MatchWay : Public
+    Byte Direct : Public
+    Byte Offset : Public
+    Int32 MatchVol : Public
+    Double MatchPrice : Public
+    Double Premium : Public
+    System.String CurrencyNo : Public, HasFieldMarshal
+    System.String CommodityCurrencyNo : Public, HasFieldMarshal
+    Byte IsRiskOrder : Public
+    System.String SystemNo : Public, HasFieldMarshal
+    System.String MatchNo : Public, HasFieldMarshal
+    UInt32 MatchStreamID : Public
+    System.String MatchDateTime : Public, HasFieldMarshal
+    Byte MatchMode : Public
+    Byte OrderType : Public
+    Double CoverPrice : Public
+    Double CoverProfit : Public
+Class EsForeignWrapper.CashOperQryReqField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String ClientNo : Public, HasFieldMarshal
+Class EsForeignWrapper.CashOperQryRspField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    EsForeignWrapper.CashOperQryReqField ReqData IsByValue : Public, InitOnly
+    Int32 SerialId : Public
+    Byte CashState : Public
+    System.String OperDateTime : Public, HasFieldMarshal
+    System.String OperatorNo : Public, HasFieldMarshal
+    System.String CheckDateTime : Public, HasFieldMarshal
+    System.String CheckOperatorNo : Public, HasFieldMarshal
+    Byte CashType : Public
+    Byte CashMode : Public
+    System.String CurrencyNo : Public, HasFieldMarshal
+    Double CashValue : Public
+    System.String CashRemark : Public, HasFieldMarshal
+    System.String ClientBank : Public, HasFieldMarshal
+    System.String ClientAccount : Public, HasFieldMarshal
+    Byte ClientLWFlag : Public
+    Byte CompanyBank : Public, HasFieldMarshal
+    System.String CompanyAccount : Public, HasFieldMarshal
+    Byte CompanyLWFlag : Public
+Class EsForeignWrapper.CurrencyQryReqField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class EsForeignWrapper.CurrencyQryRspField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String CurrencyNo : Public, HasFieldMarshal
+    System.String CurrencyName : Public, HasFieldMarshal
+    Byte IsPrimary : Public
+    Byte CurrencyGroup : Public
+    Double ExchangeRate : Public
+Class EsForeignWrapper.OrderRemoveNoticeField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String ClientNo : Public, HasFieldMarshal
+    Int32 OrderId : Public
+Class EsForeignWrapper.MatchRemoveNoticeField: AutoLayout, AnsiClass, Class, Public, SequentialLayout, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String ClientNo : Public, HasFieldMarshal
+    System.String SystemNo : Public, HasFieldMarshal
+    System.String MatchNo : Public, HasFieldMarshal
+    Int32 MatchId : Public
+Class EsForeignWrapper.RspQuotLogin: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32, String): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, String, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.ChannelLost: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32, String): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, String, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.StkQuot: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(StkData): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(StkData, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspHistoryQuot: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(StkHisData): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(StkHisData, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspTraceData: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(StkTraceData): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(StkTraceData, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspMarketInfo: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(WMarketInfo, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(WMarketInfo, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspOpen: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspClose: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspLogin: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(LoginRspField, Int32, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(LoginRspField, Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspInitFinished: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspLogOut: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspOrderInsert: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(OrderInsertRspField, Int32, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(OrderInsertRspField, Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspOrderModify: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(OrderModifyRspField, Int32, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(OrderModifyRspField, Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspOrderDelete: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(OrderDeleteRspField, Int32, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(OrderDeleteRspField, Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspQryOrder: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(OrderInfoNoticeField, Boolean(HasFieldMarshal), Int32, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(OrderInfoNoticeField, Boolean(HasFieldMarshal), Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspHistOrderQry: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(HisOrderQryRspField, Boolean(HasFieldMarshal), Int32, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(HisOrderQryRspField, Boolean(HasFieldMarshal), Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RtnOrderState: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(OrderStateNoticeField): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(OrderStateNoticeField, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RtnOrderInfo: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(OrderInfoNoticeField): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(OrderInfoNoticeField, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspMatchQry: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(MatchInfoNoticeField, Boolean(HasFieldMarshal), Int32, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(MatchInfoNoticeField, Boolean(HasFieldMarshal), Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RtnMatchState: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(MatchStateNoticeField): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(MatchStateNoticeField, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RtnMatchInfo: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(MatchInfoNoticeField): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(MatchInfoNoticeField, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspHistMatchQry: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(HisMatchQryRspField, Boolean(HasFieldMarshal), Int32, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(HisMatchQryRspField, Boolean(HasFieldMarshal), Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.QryContract: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(ContractQryRspField, Boolean(HasFieldMarshal), Int32, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(ContractQryRspField, Boolean(HasFieldMarshal), Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RtnOrderRemove: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(OrderRemoveNoticeField): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(OrderRemoveNoticeField, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RtnMatchRemove: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(MatchRemoveNoticeField): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(MatchRemoveNoticeField, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.QryMoney: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(MoneyQryRspField, Boolean(HasFieldMarshal), Int32, Int32 IsConst): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(MoneyQryRspField, Boolean(HasFieldMarshal), Int32, Int32 IsConst, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspCashOperQry: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(CashOperQryRspField, Boolean(HasFieldMarshal), Int32, Int32 IsConst): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(CashOperQryRspField, Boolean(HasFieldMarshal), Int32, Int32 IsConst, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.QryHold: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(HoldQryRspField, Boolean(HasFieldMarshal), Int32, Int32 IsConst): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(HoldQryRspField, Boolean(HasFieldMarshal), Int32, Int32 IsConst, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.QryCommodity: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(CommodityQryRspField, Boolean(HasFieldMarshal), Int32, Int32 IsConst): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(CommodityQryRspField, Boolean(HasFieldMarshal), Int32, Int32 IsConst, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RspQryCurrency: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(CurrencyQryRspField, Boolean(HasFieldMarshal), Int32, Int32 IsConst): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(CurrencyQryRspField, Boolean(HasFieldMarshal), Int32, Int32 IsConst, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class EsForeignWrapper.RtnExchangeState: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(ExchangeStateModifyNoticeField): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(ExchangeStateModifyNoticeField, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Struct EsForeignWrapper.EnumIsCaLoginType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumIsCaLoginType CA_LOGIN = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumIsCaLoginType NOT_CA_LOGIN = 78 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumIsForcePasswordType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumIsForcePasswordType FORCE_PWD = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumIsForcePasswordType NOT_FORCE_PWD = 78 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumEsLoginIdentityType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumEsLoginIdentityType IDENTITY_CLIENT = 99 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumEsLoginIdentityType IDENTITY_TCLIENT = 100 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumEsLoginIdentityType IDENTITY_BROKER = 98 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumEsLoginIdentityType IDENTITY_TRADER = 116 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumEsLoginIdentityType IDENTITY_MANAGER = 109 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumIsPrimaryCurrencyType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumIsPrimaryCurrencyType CURRENCY_PRIMARY_YES = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumIsPrimaryCurrencyType CURRENCY_PRIMARY_NO = 78 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumCurrencyGroupFlagType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumCurrencyGroupFlagType CURRENCY_GROUP_A = 65 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCurrencyGroupFlagType CURRENCY_GROUP_B = 66 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCurrencyGroupFlagType CURRENCY_GROUP_C = 67 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCurrencyGroupFlagType CURRENCY_GROUP_D = 68 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCurrencyGroupFlagType CURRENCY_GROUP_E = 69 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumExchangeStateType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumExchangeStateType EXCHANGE_STATE_YES = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumExchangeStateType EXCHANGE_STATE_NO = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumExchangeStateType EXCHANGE_STATE_COVER = 67 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumCoverModeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumCoverModeType COVER_MODE_NONE = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCoverModeType COVER_MODE_UNFINISHED = 85 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCoverModeType COVER_MODE_OPENCOVER = 67 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCoverModeType COVER_MODE_COVERTODAY = 84 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumCommodityTypeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumCommodityTypeType COMMODITY_TYPE_GOODS = 71 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCommodityTypeType COMMODITY_TYPE_FUTURE = 70 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCommodityTypeType COMMODITY_TYPE_OPTION = 79 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCommodityTypeType COMMODITY_TYPE_SPREAD_MONTH = 77 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCommodityTypeType COMMODITY_TYPE_SPREAD_COMMODITY = 67 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumCommodityStateType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumCommodityStateType COMMODITY_STATE_YES = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCommodityStateType COMMODITY_STATE_NO = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCommodityStateType COMMODITY_STATE_COVER = 67 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumDeliveryModeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumDeliveryModeType DELIVERY_MODE_GOODS = 71 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumDeliveryModeType DELIVERY_MODE_CASH = 67 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumDeliveryModeType DELIVERY_MODE_EXECUTE = 69 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumDepositCalculateModeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumDepositCalculateModeType DEPOSIT_CALCULATE_MODE_NORMAL = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumDepositCalculateModeType DEPOSIT_CALCULATE_MODE_CLEAN = 67 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumDepositCalculateModeType DEPOSIT_CALCULATE_MODE_LOCK = 76 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumContractTypeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumContractTypeType CONTRACT_TYPE_SINGLE = 48 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumContractTypeType CONTRACT_TYPE_SPREAD = 49 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumContractTypeType CONTRACT_TYPE_SWAP = 50 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumContractTypeType CONTRACT_TYPE_COMMODITY = 51 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumContractStateType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumContractStateType CONTRACT_STATE_YES = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumContractStateType CONTRACT_STATE_NO = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumContractStateType CONTRACT_STATE_COVER = 67 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumClientStateType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumClientStateType CLIENT_STATE_NORMAL = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumClientStateType CLIENT_STATE_CANCEL = 67 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumClientTypeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumClientTypeType CLIENT_TYPE_PERSON = 80 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumClientTypeType CLIENT_TYPE_ORGANIZATION = 79 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumClientTradeStateType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumClientTradeStateType CLIENT_TRADE_YES = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumClientTradeStateType CLIENT_TRADE_NO = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumClientTradeStateType CLIENT_TRADE_QUERY = 81 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumClientTradeStateType CLIENT_TRADE_COVER = 67 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumClientTradeStateType CLIENT_TRADE_FROZEN = 70 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumClientQuoteStateType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumClientQuoteStateType CLIENT_QUOTE_YES = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumClientQuoteStateType CLIENT_QUOTE_NO = 78 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumOperatorStateType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumOperatorStateType OPERATOR_TRADE_YES = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOperatorStateType OPERATOR_TRADE_NO = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOperatorStateType OPERATOR_TRADE_QUERY = 81 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOperatorStateType OPERATOR_TRADE_COVER = 67 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumOperatorLoginType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumOperatorLoginType OPERATOR_LOGIN_EVERY_FRONT = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOperatorLoginType OPERATOR_LOGIN_NOT_EVERY_FRONT = 78 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumGroupTypeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumGroupTypeType GROUP_TYPE_TRADE = 84 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumGroupTypeType GROUP_TYPE_SETTLE = 83 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumGroupTypeType GROUP_TYPE_FEERENT = 70 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumGroupTypeType GROUP_TYPE_DEPOSITRENT = 68 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumGroupTypeType GROUP_TYPE_MONEY = 77 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumPasswordTypeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumPasswordTypeType PASSWORD_TYPE_TRADE = 84 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumPasswordTypeType PASSWORD_TYPE_QUOTE = 81 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumPasswordTypeType PASSWORD_TYPE_AUTH = 65 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumOrderType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumOrderType ORDER_TYPE_LIMIT = 49 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderType ORDER_TYPE_MARKET = 50 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderType ORDER_TYPE_STOP_LIMIT = 51 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderType ORDER_TYPE_STOP_MARKET = 52 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumOrderWayType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumOrderWayType ORDER_WAY_SELF_ETRADER = 69 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderWayType ORDER_WAY_PROXY_ETRADER = 80 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderWayType ORDER_WAY_JTRADER = 74 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderWayType ORDER_WAY_MANUAL = 77 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderWayType ORDER_WAY_CARRY = 67 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderWayType ORDER_WAY_PROGRAM = 83 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumOrderModeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumOrderModeType ORDER_MODE_FOK = 49 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderModeType ORDER_MODE_FAK = 50 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderModeType ORDER_MODE_GFD = 51 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderModeType ORDER_MODE_GTC = 52 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderModeType ORDER_MODE_GTD = 53 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumMatchWayType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumMatchWayType MATCH_WAY_ALL = 65 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumMatchWayType MATCH_WAY_SELF_ETRADER = 69 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumMatchWayType MATCH_WAY_PROXY_ETRADER = 80 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumMatchWayType MATCH_WAY_JTRADER = 74 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumMatchWayType MATCH_WAY_MANUAL = 77 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumMatchWayType MATCH_WAY_CARRY = 67 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumMatchWayType MATCH_WAY_DELIVERY = 68 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumMatchWayType MATCH_WAY_PROGRAM = 83 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumIsRiskOrderType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumIsRiskOrderType RISK_ORDER_YES = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumIsRiskOrderType RISK_ORDER_NO = 78 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumDirectType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumDirectType DIRECT_BUY = 66 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumDirectType DIRECT_SELL = 83 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumOffsetType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumOffsetType OFFSET_NONE = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOffsetType OFFSET_OPEN = 79 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOffsetType OFFSET_COVER = 67 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOffsetType OFFSET_COVER_TODAY = 84 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumHedgeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumHedgeType HEDGE_NONE = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumHedgeType HEDGE_T = 84 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumHedgeType HEDGE_B = 66 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumOrderInputType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumOrderInputType ORDER_INPUT_YES = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderInputType ORDER_INPUT_NO = 78 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumAddOneType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumAddOneType ADD_ONE_YES = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumAddOneType ADD_ONE_NO = 78 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumManualFeeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumManualFeeType MANUALFEE_YES = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumManualFeeType MANUALFEE_NO = 78 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumOrderStateType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumOrderStateType ORDER_STATE_FAIL = 48 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderStateType ORDER_STATE_ACCEPT = 49 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderStateType ORDER_STATE_SUPPENDED = 50 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderStateType ORDER_STATE_QUEUED = 51 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderStateType ORDER_STATE_DELETEING = 52 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderStateType ORDER_STATE_MODIFYING = 53 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderStateType ORDER_STATE_PARTDELETED = 54 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderStateType ORDER_STATE_DELETED = 55 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderStateType ORDER_STATE_PARTFINISHED = 56 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumOrderStateType ORDER_STATE_FINISHED = 57 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumMatchModeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumMatchModeType MATCH_MODE_NORMAL = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumMatchModeType MATCH_MODE_UPDATE = 85 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumMatchModeType MATCH_MODE_OTHER = 79 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumTradeNoTypeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumTradeNoTypeType TRADENO_NORMAL = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTradeNoTypeType TRADENO_TOUJI = 84 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTradeNoTypeType TRADENO_BAOZHI = 66 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTradeNoTypeType TRADENO_SPREAD = 83 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumCashTypeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumCashTypeType CASH_TYPE_OUT = 79 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCashTypeType CASH_TYPE_IN = 73 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumCashStateType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumCashStateType CASH_STATE_NOT_CHECK = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCashStateType CASH_STATE_CHECK = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCashStateType CASH_STATE_FAIL = 70 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumCashModeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumCashModeType CASH_MODE_A = 65 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCashModeType CASH_MODE_B = 66 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCashModeType CASH_MODE_C = 67 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumCashModeType CASH_MODE_E = 69 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumForceCashOutFlagType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumForceCashOutFlagType FORCE_CASH_OUT_YES = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumForceCashOutFlagType FORCE_CASH_OUT_NO = 78 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumAdjustStateType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumAdjustStateType ADJUST_STATE_NOT_CHECK = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumAdjustStateType ADJUST_STATE_CHECK = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumAdjustStateType ADJUST_STATE_FAIL = 70 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumTMoneyChgType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_ADJUST = 1 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_CASHIN = 2 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_CASHOUT = 4 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_FEE = 8 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_FROZEN = 16 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_COVERPROFIT = 32 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_DAYCVERPROFIT = 64 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_FLOATPROFIT = 128 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_DAYFLOATPROFIT = 256 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_UNEXPIREDPROFIT = 512 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_PREMIUM = 1024 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_DEPOSIT = 2048 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_KEEPDEPOSIT = 4096 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_PLEDGE = 8192 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_TAVAILABLE = 16384 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_Discount = 32768 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_TradeFee = 65536 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_DeliveryFee = 131072 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_ExchangeFee = 262144 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_FrozenDeposit = 524288 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_FrozenFee = 1048576 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_NewFloatProfit = 2097152 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_LmeFloatProfit = 4194304 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_OptionMarketValue = 8388608 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_OriCash = 16777216 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_TMoney = 33554432 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_TBalance = 67108864 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_TCanCashOut = 134217728 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_RiskRate = 268435456 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumTMoneyChgType MONEY_CHG_AccountMarketValue = 536870912 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumMessageReceiverType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumMessageReceiverType MESSAGE_RECEIVER_CLIENT = 67 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumMessageReceiverType MESSAGE_RECEIVER_GROUP = 71 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumMessageReceiverType MESSAGE_RECEIVER_ALL = 65 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumDepositModeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumDepositModeType DEPOSIT_MODE_B = 49 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumDepositModeType DEPOSIT_MODE_D = 50 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumDepositModeType DEPOSIT_MODE_CB = 51 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumDepositModeType DEPOSIT_MODE_CD = 52 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumDepositModeType DEPOSIT_MODE_Z = 53 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumLogTypeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumLogTypeType LOGTYPE_LOGIN = 49 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumDeletedType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumDeletedType DEL_YES = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumDeletedType DEL_NO = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumDeletedType DEL_DISAPPEAR = 68 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumContainTotleType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumContainTotleType ContainTotle_Yes = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumContainTotleType ContainTotle_No = 78 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumLWFlagType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumLWFlagType LWFlag_L = 76 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumLWFlagType LWFlag_W = 87 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumLWFlagType LJFFlag_J = 74 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumLWFlagType LJFFlag_F = 70 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumEventTypeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumEventTypeType EVENT_TYPE_Y = 89 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumEventTypeType EVENT_TYPE_N = 78 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumEventLevelType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumEventLevelType EVENT_TYPE_NORMAL = 78 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumEventLevelType EVENT_TYPE_WARNNING = 87 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumEventLevelType EVENT_TYPE_ERROR = 69 : Public, Static, Literal, HasDefault
+Struct EsForeignWrapper.EnumHKMarketOperType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EsForeignWrapper.EnumHKMarketOperType MarketOper_None = 0 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumHKMarketOperType MarketOper_Insert = 73 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumHKMarketOperType MarketOper_Modify = 77 : Public, Static, Literal, HasDefault
+    EsForeignWrapper.EnumHKMarketOperType MarketOper_Delete = 68 : Public, Static, Literal, HasDefault
+Class EsForeignWrapper.Class1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class EsForeignWrapper.EsQuotApi: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    EsForeignWrapper.RspQuotLogin OnRspLogin : Public
+    EsForeignWrapper.ChannelLost OnChannelLost : Public
+    EsForeignWrapper.StkQuot OnStkQuot : Public
+    EsForeignWrapper.RspHistoryQuot OnRspHistoryQuot : Public
+    EsForeignWrapper.RspTraceData OnRspTraceData : Public
+    EsForeignWrapper.RspMarketInfo OnRspMarketInfo : Public
+  Methods:
+    Connect(String, Int32): PrivateScope, Public, HideBySig
+    DisConnect(): PrivateScope, Public, HideBySig
+    Login(String, String): PrivateScope, Public, HideBySig
+    RequestQuot(String, String, Int32): PrivateScope, Public, HideBySig
+    RequestHistory(String, String, Int32): PrivateScope, Public, HideBySig
+    RequestTrace(String, String, String): PrivateScope, Public, HideBySig
+    AddReqStk(String, String, Int32): PrivateScope, Public, HideBySig
+    SendReqStk(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct EsForeignWrapper.IEsQuotSpi: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Class EsForeignWrapper.EsTradeApi: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    EsForeignWrapper.RspOpen OnRspOpen : Public
+    EsForeignWrapper.RspClose OnRspClose : Public
+    EsForeignWrapper.RspLogin OnRspLogin : Public
+    EsForeignWrapper.RspInitFinished OnRspInitFinished : Public
+    EsForeignWrapper.RspLogOut OnRspLogOut : Public
+    EsForeignWrapper.RspOrderInsert OnRspOrderInsert : Public
+    EsForeignWrapper.RspOrderModify OnRspOrderModify : Public
+    EsForeignWrapper.RspOrderDelete OnRspOrderDelete : Public
+    EsForeignWrapper.RspQryOrder OnRspQryOrder : Public
+    EsForeignWrapper.RspHistOrderQry OnRspHistOrderQry : Public
+    EsForeignWrapper.RtnOrderState OnRtnOrderState : Public
+    EsForeignWrapper.RtnOrderInfo OnRtnOrderInfo : Public
+    EsForeignWrapper.RspMatchQry OnRspMatchQry : Public
+    EsForeignWrapper.RtnMatchState OnRtnMatchState : Public
+    EsForeignWrapper.RtnMatchInfo OnRtnMatchInfo : Public
+    EsForeignWrapper.RspHistMatchQry OnRspHistMatchQry : Public
+    EsForeignWrapper.QryContract OnQryContract : Public
+    EsForeignWrapper.RtnOrderRemove OnRtnOrderRemove : Public
+    EsForeignWrapper.RtnMatchRemove OnRtnMatchRemove : Public
+    EsForeignWrapper.QryMoney OnQryMoney : Public
+    EsForeignWrapper.RspCashOperQry OnRspCashOperQry : Public
+    EsForeignWrapper.QryHold OnQryHold : Public
+    EsForeignWrapper.QryCommodity OnQryCommodity : Public
+    EsForeignWrapper.RspQryCurrency OnRspQryCurrency : Public
+    EsForeignWrapper.RtnExchangeState OnRtnExchangeState : Public
+  Methods:
+    Free(): PrivateScope, Public, HideBySig
+    GetErrcodeDesc(Int32): PrivateScope, Public, HideBySig
+    Open(AddressField): PrivateScope, Public, HideBySig
+    IsOpen(): PrivateScope, Public, HideBySig
+    Login(LoginReqField, Int32): PrivateScope, Public, HideBySig
+    LogOut(Int32): PrivateScope, Public, HideBySig
+    OrderInsert(OrderInsertReqField, Int32): PrivateScope, Public, HideBySig
+    OrderDelete(Int32, Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig

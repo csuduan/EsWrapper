@@ -1,0 +1,36 @@
+﻿<Window x:Class="EsForeignDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EsForeignDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="启动行情" HorizontalAlignment="Left" Margin="575,31,0,0" VerticalAlignment="Top" Width="76" Height="24" Click="Button_Click"/>
+        <Button Content="启动交易" HorizontalAlignment="Left" Margin="30,18,0,0" VerticalAlignment="Top" Width="76" Height="28" Click="Button_Click_2"/>
+        <Button Content="断开行情" HorizontalAlignment="Left" Margin="575,70,0,0" VerticalAlignment="Top" Width="76" Height="24" Click="Button_Click_1"/>
+        <Button Content="断开交易" HorizontalAlignment="Left" Margin="233,18,0,0" VerticalAlignment="Top" Width="76" Height="28" Click="Button_Click_4"/>
+        <Label Content="合约" HorizontalAlignment="Left" Margin="30,69,0,0" VerticalAlignment="Top" Width="49"/>
+        <TextBox x:Name="tbContract" HorizontalAlignment="Left" Height="23" Margin="79,70,0,0" TextWrapping="Wrap" Text="C 1807" VerticalAlignment="Top" Width="120"/>
+        <Label Content="手数" HorizontalAlignment="Left" Margin="30,110,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbVolume" HorizontalAlignment="Left" Height="23" Margin="79,112,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+        <Label Content="价格" HorizontalAlignment="Left" Margin="30,148,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbPrice" HorizontalAlignment="Left" Height="23" Margin="79,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnBuy" Content="买" HorizontalAlignment="Left" Margin="31,195,0,0" VerticalAlignment="Top" Width="48" Click="btnBuy_Click"/>
+        <Button x:Name="btnSell" Content="卖" HorizontalAlignment="Left" Margin="101,195,0,0" VerticalAlignment="Top" Width="48" Click="btnSell_Click"/>
+        <Label Content="委托编号" HorizontalAlignment="Left" Margin="31,231,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbOrderId" HorizontalAlignment="Left" Height="23" Margin="101,231,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"/>
+        <Button x:Name="btnDelete" Content="撤单" HorizontalAlignment="Left" Margin="234,235,0,0" VerticalAlignment="Top" Width="75" Click="btnDelete_Click"/>
+        
+        <Button x:Name="btnQryOrder" Content="查询委托" HorizontalAlignment="Left" Margin="31,287,0,0" VerticalAlignment="Top" Width="75" Click="btnQryOrder_Click" />
+        <Button  x:Name="btnQryTrade" Content="查询成交" HorizontalAlignment="Left" Margin="136,287,0,0" VerticalAlignment="Top" Width="75" Click="btnQryTrade_Click"/>
+        <Button x:Name="btnQryMoney" Content="查询资金" HorizontalAlignment="Left" Margin="136,324,0,0" VerticalAlignment="Top" Width="75" Click="btnQryMoney_Click"/>
+        <Button  x:Name="btnQryHold" Content="查询持仓" HorizontalAlignment="Left" Margin="238,287,0,0" VerticalAlignment="Top" Width="75" Click="btnQryHold_Click"/>
+        <Button  x:Name="btnQryCommodity" Content="查询商品" HorizontalAlignment="Left" Margin="31,323,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="btnQryCommodity_Click"/>
+        <Button  x:Name="btnQryCurrency" Content="查询汇率" HorizontalAlignment="Left" Margin="238,323,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="btnQryCurrency_Click"/>
+
+
+
+    </Grid>
+</Window>

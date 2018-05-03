@@ -1,0 +1,15 @@
+﻿<Window x:Class="EsForeignDemo.VerfiWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EsForeignDemo"
+        mc:Ignorable="d"
+        Title="VerfiWin" Height="114.14" Width="410.35">
+    <Grid>
+        <Label Content="验证码" HorizontalAlignment="Left" Margin="34,22,0,0" VerticalAlignment="Top" Width="56"/>
+        <TextBox Name="tbVerfi" HorizontalAlignment="Left" Height="23" Margin="83,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button  Name="btnVerfi" Content="验证" HorizontalAlignment="Left" Margin="239,24,0,0" VerticalAlignment="Top" Width="75" Click="btnVerfi_Click"/>
+
+    </Grid>
+</Window>
